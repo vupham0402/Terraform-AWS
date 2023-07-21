@@ -1,0 +1,4 @@
+sudo apt update
+sudo apt install git mysql-client -y
+git clone https://github.com/vupham0402/Terraform-AWS.git
+mysql -h ${rds-endpoint} -u ${dbuser} --password=${dbpass} accounts --ssl-mode=DISABLED < /home/ubuntu/Terraform-AWS/src/main/resources/db_backup.sql
